@@ -21,7 +21,7 @@ class AnsiCodes(object):
 			if not code.startswith("_"):
 				setattr(self, code, code_to_chars(getattr(self, code)))
 
-class CursorCodes(object):
+class Cursor:
 	def UP(n):
 		return f"{CSI}{n}A"
 	def DOWN(n):
@@ -85,4 +85,3 @@ class StyleCodes(AnsiCodes):
 Fore = ForeCodes()
 Back = BackCodes()
 Style = StyleCodes()
-Cursor = CursorCodes()
