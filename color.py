@@ -22,13 +22,16 @@ class AnsiCodes(object):
 				setattr(self, code, code_to_chars(getattr(self, code)))
 
 class CursorCodes(object):
-	UP = lambda n: f"{CSI}{n}A"
-	DOWN = lambda n: f"{CSI}{n}B"
-	FORWARD = lambda n: f"{CSI}{n}nC"
-	BACK = lambda n: f"{CSI}{n}D"
-	POS = lambda row, column: f"{CSI}{row};{column}H"
-	HIDE = f"{CSI}? 25 l"
-	SHOW = f"{CSI}? 25 h"
+	def UP(n):
+		return f"{CSI}{n}A"
+	def DOWN(n):
+		return f"{CSI}{n}B"
+	def FORWARD(n):
+		return f"{CSI}{n}C"
+	def BACK(n):
+		return f"{CSI}{n}D"
+	def POS(row, column):
+		return f"{CSI}{row};{column}H"
 
 class ForeCodes(AnsiCodes):
 	RESET = 39
