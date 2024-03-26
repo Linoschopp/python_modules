@@ -21,16 +21,18 @@ class AnsiCodes(object):
 			if not code.startswith("_"):
 				setattr(self, code, code_to_chars(getattr(self, code)))
 
-class Cursor:
-	def UP(n):
+class Cursor()object:
+	def __init__():
+		pass
+	def UP(self, n):
 		return f"{CSI}{n}A"
-	def DOWN(n):
+	def DOWN(self, n):
 		return f"{CSI}{n}B"
-	def FORWARD(n):
+	def FORWARD(self, n):
 		return f"{CSI}{n}C"
-	def BACK(n):
+	def BACK(self, n):
 		return f"{CSI}{n}D"
-	def POS(row, column):
+	def POS(self, row, column):
 		return f"{CSI}{row};{column}H"
 
 class ForeCodes(AnsiCodes):
