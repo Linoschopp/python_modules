@@ -21,7 +21,7 @@ class AnsiCodes(object):
 			if not code.startswith("_"):
 				setattr(self, code, code_to_chars(getattr(self, code)))
 
-class Cursor()object:
+class CursorCodes(object):
 	def __init__():
 		pass
 	def UP(self, n):
@@ -83,7 +83,7 @@ class StyleCodes(AnsiCodes):
 	STRIKE = 9
 	DOUBLE_UNDERLINE = 21
 
-
+Cursor = CorsorCodes()
 Fore = ForeCodes()
 Back = BackCodes()
 Style = StyleCodes()
