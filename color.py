@@ -22,7 +22,7 @@ class AnsiCodes(object):
 				setattr(self, code, code_to_chars(getattr(self, code)))
 
 class CursorCodes(object):
-	def __init__():
+	def __init__(self):
 		pass
 	def UP(self, n):
 		return f"{CSI}{n}A"
