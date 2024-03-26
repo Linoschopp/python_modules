@@ -83,7 +83,7 @@ class StyleCodes(AnsiCodes):
 	STRIKE = 9
 	DOUBLE_UNDERLINE = 21
 
-Cursor = CorsorCodes()
+Cursor = CursorCodes()
 Fore = ForeCodes()
 Back = BackCodes()
 Style = StyleCodes()
